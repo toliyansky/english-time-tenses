@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>English Time Tenses Visualizer</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="container">
+      <header class="page-header">
+        <h1>Time Tenses Visualizer</h1>
+        <p class="subtitle">Заполнение из файла <code>time-tenses.json</code></p>
+      </header>
+
+      <section class="controls" aria-label="Voice toggle controls">
+        <div class="toggle-group" role="group" aria-label="Active or Passive voice selector">
+          <label class="switch">
+            <input type="checkbox" id="voiceToggle" aria-label="Toggle voice">
+            <span class="slider" aria-hidden="true"></span>
+          </label>
+          <div class="toggle-labels">
+            <span class="label-active">Active</span>
+            <span class="label-passive">Passive</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="table-wrapper">
+        <table id="tensesTable" class="tenses-table" aria-describedby="tableNote">
+          <thead>
+            <tr>
+              <th scope="col">Time</th>
+              <th scope="col">Simple</th>
+              <th scope="col">Continuous</th>
+              <th scope="col">Perfect</th>
+              <th scope="col">Perfect Continuous</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+        <p id="tableNote" class="table-note">Переключатель сверху меняет отображение структур для Active/Passive.</p>
+      </section>
+
+      <section id="errorSection" class="error" hidden></section>
+    </main>
+
+    <script src="./app.js" defer></script>
+  </body>
+  </html>
+
+
