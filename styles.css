@@ -126,6 +126,7 @@ html, body {
   border-radius: 8px;
   padding: 4px;
   font-size: 12px; /* smaller font for formulas */
+  transition: background-color .15s ease, border-color .15s ease;
 }
 
 .cell-content { display: grid; gap: 4px; }
@@ -133,10 +134,15 @@ html, body {
 .cell-block { display: grid; gap: 3px; }
 .formula-label { display: none; }
 
-/* Color-code formula blocks by type */
-.formula--aff { border-color: #86efac; background: #ecfdf5; }
-.formula--neg { border-color: #fecaca; background: #fef2f2; }
-.formula--q { border-color: #bfdbfe; background: #eff6ff; }
+/* Color-code formula blocks by type (muted) */
+.formula--aff { border-color: #cdeeda; background: #f4fbf7; }
+.formula--neg { border-color: #f3d4d4; background: #fdf7f7; }
+.formula--q  { border-color: #d7e6ff; background: #f6f9ff; }
+
+/* Slightly brighter on hover */
+.formula--aff:hover { border-color: #86efac; background: #eaf8f0; }
+.formula--neg:hover { border-color: #fecaca; background: #fdeeee; }
+.formula--q:hover  { border-color: #bfdbfe; background: #eef4ff; }
 
 .markers {
   display: flex;
@@ -145,12 +151,19 @@ html, body {
 }
 
 .marker-chip {
-  background: #eaf4ff;
-  border: 1px solid #cfe3ff;
-  color: #1e3a8a;
+  background: #f1f5f9; /* slate-100 */
+  border: 1px solid #e2e8f0; /* slate-200 */
+  color: #475569; /* slate-600 */
   border-radius: 999px;
   padding: 1px 6px;
   font-size: 12px;
+  transition: background-color .15s ease, border-color .15s ease, color .15s ease;
+}
+
+.marker-chip:hover {
+  background: #e2e8f0; /* slate-200 */
+  border-color: #cbd5e1; /* slate-300 */
+  color: #334155; /* slate-700 */
 }
 
 .table-note {
