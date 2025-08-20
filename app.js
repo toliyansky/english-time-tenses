@@ -5,20 +5,23 @@
  */
 (function init() {
   const TABLE_ID = 'tensesTable';
-  const TOGGLE_ID = 'voiceToggle';
+  const BTN_ACTIVE_ID = 'btnActive';
+  const BTN_PASSIVE_ID = 'btnPassive';
   const ERROR_ID = 'errorSection';
   const DATA_FILE = './time-tenses.json';
 
   /** @type {HTMLElement|null} */
   const table = document.getElementById(TABLE_ID);
-  /** @type {HTMLInputElement|null} */
-  const voiceToggle = document.getElementById(TOGGLE_ID);
+  /** @type {HTMLButtonElement|null} */
+  const btnActive = document.getElementById(BTN_ACTIVE_ID);
+  /** @type {HTMLButtonElement|null} */
+  const btnPassive = document.getElementById(BTN_PASSIVE_ID);
   /** @type {HTMLElement|null} */
   const errorSection = document.getElementById(ERROR_ID);
   /** @type {HTMLElement|null} */
   const controls = document.querySelector('.controls');
 
-  if (!table || !voiceToggle || !errorSection || !controls) {
+  if (!table || !btnActive || !btnPassive || !errorSection || !controls) {
     console.error('Required elements are missing in the DOM.');
     return;
   }
@@ -29,7 +32,7 @@
   };
 
   // Initialize UI state of labels
-  updateToggleState();
+  updateControlsState();
 
   // Load and render
   loadData()
@@ -40,15 +43,12 @@
     .catch((err) => showError(err));
 
   // Attach toggle listener
-  voiceToggle.addEventListener('change', () => {
-    state.voice = voiceToggle.checked ? 'passive' : 'active';
-    updateToggleState();
-    render();
-  });
+  btnActive.addEventListener('click', () => { state.voice = 'active'; updateControlsState(); render(); });
+  btnPassive.addEventListener('click', () => { state.voice = 'passive'; updateControlsState(); render(); });
 
-  function updateToggleState() {
-    controls.classList.toggle('is-active', !voiceToggle.checked);
-    controls.classList.toggle('is-passive', voiceToggle.checked);
+  function updateControlsState() {
+    controls.classList.toggle('is-active', state.voice === 'active');
+    controls.classList.toggle('is-passive', state.voice === 'passive');
   }
 
   function showError(err) {
