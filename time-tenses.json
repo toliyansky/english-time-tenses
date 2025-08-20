@@ -1,0 +1,458 @@
+{
+  "tenses": [
+    {
+      "time": "Present",
+      "aspects": [
+        {
+          "name": "Simple",
+          "description": "For habits, routines, unchanging situations, general truths, and fixed arrangements.",
+          "structures": {
+            "active": [
+              {
+                "type": "Affirmative",
+                "formula": "I/You/We/They + V¹\nHe/She/It + V¹s"
+              },
+              {
+                "type": "Negative",
+                "formula": "I/You/We/They + do not (don't) + V¹\nHe/She/It + does not (doesn't) + V¹"
+              },
+              {
+                "type": "Question",
+                "formula": "Do + I/you/we/they + V¹?\nDoes + he/she/it + V¹?"
+              }
+            ],
+            "passive": [
+              {
+                "type": "Affirmative",
+                "formula": "Object + am/is/are + V³"
+              },
+              {
+                "type": "Negative",
+                "formula": "Object + am not/is not (isn't)/are not (aren't) + V³"
+              },
+              {
+                "type": "Question",
+                "formula": "Am/Is/Are + Object + V³?"
+              }
+            ]
+          },
+          "markers": [
+            "always",
+            "usually",
+            "often",
+            "sometimes",
+            "rarely",
+            "never",
+            "every day",
+            "on Mondays"
+          ]
+        },
+        {
+          "name": "Continuous",
+          "description": "For actions happening at the moment of speaking or temporary actions and trends.",
+          "structures": {
+            "active": [
+              {
+                "type": "Affirmative",
+                "formula": "I + am + V-ing\nHe/She/It + is + V-ing\nWe/You/They + are + V-ing"
+              },
+              {
+                "type": "Negative",
+                "formula": "Subject + am not/is not (isn't)/are not (aren't) + V-ing"
+              },
+              {
+                "type": "Question",
+                "formula": "Am/Is/Are + subject + V-ing?"
+              }
+            ],
+            "passive": [
+              {
+                "type": "Affirmative",
+                "formula": "Object + am/is/are + being + V³"
+              },
+              {
+                "type": "Negative",
+                "formula": "Object + am not/is not (isn't)/are not (aren't) + being + V³"
+              },
+              {
+                "type": "Question",
+                "formula": "Am/Is/Are + Object + being + V³?"
+              }
+            ]
+          },
+          "markers": [
+            "now",
+            "at the moment",
+            "right now",
+            "Look!",
+            "Listen!",
+            "currently"
+          ]
+        },
+        {
+          "name": "Perfect",
+          "description": "For past actions with results in the present or for life experiences.",
+          "structures": {
+            "active": [
+              {
+                "type": "Affirmative",
+                "formula": "I/You/We/They + have + V³\nHe/She/It + has + V³"
+              },
+              {
+                "type": "Negative",
+                "formula": "Subject + have not (haven't)/has not (hasn't) + V³"
+              },
+              {
+                "type": "Question",
+                "formula": "Have/Has + subject + V³?"
+              }
+            ],
+            "passive": [
+              {
+                "type": "Affirmative",
+                "formula": "Object + have/has + been + V³"
+              },
+              {
+                "type": "Negative",
+                "formula": "Object + have not (haven't)/has not (hasn't) + been + V³"
+              },
+              {
+                "type": "Question",
+                "formula": "Have/Has + Object + been + V³?"
+              }
+            ]
+          },
+          "markers": [
+            "already",
+            "yet",
+            "just",
+            "ever",
+            "never",
+            "since",
+            "for",
+            "recently"
+          ]
+        },
+        {
+          "name": "Perfect Continuous",
+          "description": "For actions that started in the past and are still continuing. Emphasizes duration. Passive voice is extremely rare.",
+          "structures": {
+            "active": [
+              {
+                "type": "Affirmative",
+                "formula": "I/You/We/They + have + been + V-ing\nHe/She/It + has + been + V-ing"
+              },
+              {
+                "type": "Negative",
+                "formula": "Subject + have not (haven't)/has not (hasn't) + been + V-ing"
+              },
+              {
+                "type": "Question",
+                "formula": "Have/Has + subject + been + V-ing?"
+              }
+            ],
+            "passive": []
+          },
+          "markers": [
+            "for",
+            "since",
+            "all day",
+            "the whole week",
+            "lately"
+          ]
+        }
+      ]
+    },
+    {
+      "time": "Past",
+      "aspects": [
+        {
+          "name": "Simple",
+          "description": "For completed actions at a specific time in the past.",
+          "structures": {
+            "active": [
+              {
+                "type": "Affirmative",
+                "formula": "Subject + V²"
+              },
+              {
+                "type": "Negative",
+                "formula": "Subject + did not (didn't) + V¹"
+              },
+              {
+                "type": "Question",
+                "formula": "Did + subject + V¹?"
+              }
+            ],
+            "passive": [
+              {
+                "type": "Affirmative",
+                "formula": "Object + was/were + V³"
+              },
+              {
+                "type": "Negative",
+                "formula": "Object + was not (wasn't)/were not (weren't) + V³"
+              },
+              {
+                "type": "Question",
+                "formula": "Was/Were + Object + V³?"
+              }
+            ]
+          },
+          "markers": [
+            "yesterday",
+            "last week/month/year",
+            "in 1999",
+            "ago"
+          ]
+        },
+        {
+          "name": "Continuous",
+          "description": "For an ongoing action in the past that was interrupted or happening at a specific past time.",
+          "structures": {
+            "active": [
+              {
+                "type": "Affirmative",
+                "formula": "I/He/She/It + was + V-ing\nWe/You/They + were + V-ing"
+              },
+              {
+                "type": "Negative",
+                "formula": "Subject + was not (wasn't)/were not (weren't) + V-ing"
+              },
+              {
+                "type": "Question",
+                "formula": "Was/Were + subject + V-ing?"
+              }
+            ],
+            "passive": [
+              {
+                "type": "Affirmative",
+                "formula": "Object + was/were + being + V³"
+              },
+              {
+                "type": "Negative",
+                "formula": "Object + was not (wasn't)/were not (weren't) + being + V³"
+              },
+              {
+                "type": "Question",
+                "formula": "Was/Were + Object + being + V³?"
+              }
+            ]
+          },
+          "markers": [
+            "while",
+            "when",
+            "as",
+            "at 5 PM yesterday"
+          ]
+        },
+        {
+          "name": "Perfect",
+          "description": "For an action that happened before another action or a specific time in the past.",
+          "structures": {
+            "active": [
+              {
+                "type": "Affirmative",
+                "formula": "Subject + had + V³"
+              },
+              {
+                "type": "Negative",
+                "formula": "Subject + had not (hadn't) + V³"
+              },
+              {
+                "type": "Question",
+                "formula": "Had + subject + V³?"
+              }
+            ],
+            "passive": [
+              {
+                "type": "Affirmative",
+                "formula": "Object + had + been + V³"
+              },
+              {
+                "type": "Negative",
+                "formula": "Object + had not (hadn't) + been + V³"
+              },
+              {
+                "type": "Question",
+                "formula": "Had + Object + been + V³?"
+              }
+            ]
+          },
+          "markers": [
+            "before",
+            "after",
+            "already",
+            "by the time",
+            "when"
+          ]
+        },
+        {
+          "name": "Perfect Continuous",
+          "description": "For an ongoing action in the past that continued up until another past action. Emphasizes duration. Passive voice is extremely rare.",
+          "structures": {
+            "active": [
+              {
+                "type": "Affirmative",
+                "formula": "Subject + had + been + V-ing"
+              },
+              {
+                "type": "Negative",
+                "formula": "Subject + had not (hadn't) + been + V-ing"
+              },
+              {
+                "type": "Question",
+                "formula": "Had + subject + been + V-ing?"
+              }
+            ],
+            "passive": []
+          },
+          "markers": [
+            "for",
+            "since",
+            "before",
+            "by the time"
+          ]
+        }
+      ]
+    },
+    {
+      "time": "Future",
+      "aspects": [
+        {
+          "name": "Simple",
+          "description": "For predictions, spontaneous decisions, promises, and offers.",
+          "structures": {
+            "active": [
+              {
+                "type": "Affirmative",
+                "formula": "Subject + will + V¹"
+              },
+              {
+                "type": "Negative",
+                "formula": "Subject + will not (won't) + V¹"
+              },
+              {
+                "type": "Question",
+                "formula": "Will + subject + V¹?"
+              }
+            ],
+            "passive": [
+              {
+                "type": "Affirmative",
+                "formula": "Object + will + be + V³"
+              },
+              {
+                "type": "Negative",
+                "formula": "Object + will not (won't) + be + V³"
+              },
+              {
+                "type": "Question",
+                "formula": "Will + Object + be + V³?"
+              }
+            ]
+          },
+          "markers": [
+            "tomorrow",
+            "next week/month/year",
+            "in the future",
+            "soon",
+            "later"
+          ]
+        },
+        {
+          "name": "Continuous",
+          "description": "For an action that will be in progress at a specific time in the future. Passive voice is very rare.",
+          "structures": {
+            "active": [
+              {
+                "type": "Affirmative",
+                "formula": "Subject + will + be + V-ing"
+              },
+              {
+                "type": "Negative",
+                "formula": "Subject + will not (won't) + be + V-ing"
+              },
+              {
+                "type": "Question",
+                "formula": "Will + subject + be + V-ing?"
+              }
+            ],
+            "passive": []
+          },
+          "markers": [
+            "at 5 PM tomorrow",
+            "this time next week",
+            "in one year"
+          ]
+        },
+        {
+          "name": "Perfect",
+          "description": "For an action that will be completed before a specific time or another action in the future.",
+          "structures": {
+            "active": [
+              {
+                "type": "Affirmative",
+                "formula": "Subject + will + have + V³"
+              },
+              {
+                "type": "Negative",
+                "formula": "Subject + will not (won't) + have + V³"
+              },
+              {
+                "type": "Question",
+                "formula": "Will + subject + have + V³?"
+              }
+            ],
+            "passive": [
+              {
+                "type": "Affirmative",
+                "formula": "Object + will + have + been + V³"
+              },
+              {
+                "type": "Negative",
+                "formula": "Object + will not (won't) + have + been + V³"
+              },
+              {
+                "type": "Question",
+                "formula": "Will + Object + have + been + V³?"
+              }
+            ]
+          },
+          "markers": [
+            "by tomorrow",
+            "by next month",
+            "by the time",
+            "before"
+          ]
+        },
+        {
+          "name": "Perfect Continuous",
+          "description": "For an ongoing action that will continue up until a specific point in the future. Emphasizes duration. Passive voice is extremely rare.",
+          "structures": {
+            "active": [
+              {
+                "type": "Affirmative",
+                "formula": "Subject + will + have + been + V-ing"
+              },
+              {
+                "type": "Negative",
+                "formula": "Subject + will not (won't) + have + been + V-ing"
+              },
+              {
+                "type": "Question",
+                "formula": "Will + subject + have + been + V-ing?"
+              }
+            ],
+            "passive": []
+          },
+          "markers": [
+            "by...",
+            "for...",
+            "when..."
+          ]
+        }
+      ]
+    }
+  ]
+}
