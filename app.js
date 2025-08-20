@@ -80,7 +80,7 @@
 
       // First column: Time
       const tdTime = document.createElement('td');
-      tdTime.innerHTML = '<span class="time-badge">' + escapeHtml(tense.time) + '</span>';
+      tdTime.innerHTML = '<div class="time-name">' + escapeHtml(tense.time) + '</div>';
       row.appendChild(tdTime);
 
       // Map aspects by name for quick access
@@ -109,9 +109,10 @@
     return map;
   }
 
-  function renderFormula(entry) {
+  function renderFormula(entry, type) {
     if (!entry || !entry.formula) { return '<span class="muted">—</span>'; }
-    return '<div class="formula">' + escapeHtml(entry.formula) + '</div>';
+    const typeClass = type ? ' formula--' + type : '';
+    return '<div class="formula' + typeClass + '">' + escapeHtml(entry.formula) + '</div>';
   }
 
   function renderCellContent(aspect, voiceKey) {
@@ -138,25 +139,21 @@
 
     const aff = document.createElement('div');
     aff.className = 'cell-block';
-    aff.innerHTML = '<span class="formula-label">Affirmative</span>' + renderFormula(byType['Affirmative']);
+    aff.innerHTML = renderFormula(byType['Affirmative'], 'aff');
     wrapper.appendChild(aff);
 
     const neg = document.createElement('div');
     neg.className = 'cell-block';
-    neg.innerHTML = '<span class="formula-label">Negative</span>' + renderFormula(byType['Negative']);
+    neg.innerHTML = renderFormula(byType['Negative'], 'neg');
     wrapper.appendChild(neg);
 
     const q = document.createElement('div');
     q.className = 'cell-block';
-    q.innerHTML = '<span class="formula-label">Question</span>' + renderFormula(byType['Question']);
+    q.innerHTML = renderFormula(byType['Question'], 'q');
     wrapper.appendChild(q);
 
     const markersBlock = document.createElement('div');
     markersBlock.className = 'cell-block';
-    const label = document.createElement('span');
-    label.className = 'formula-label';
-    label.textContent = 'Markers';
-    markersBlock.appendChild(label);
     markersBlock.appendChild(renderMarkers(aspect.markers || []));
     wrapper.appendChild(markersBlock);
 
