@@ -1,13 +1,13 @@
 /* Base layout */
 :root {
-  --bg: #0f172a;
-  --panel: #111827;
-  --muted: #94a3b8;
-  --text: #e5e7eb;
-  --accent: #22c55e;
+  --bg: #f8fafc;
+  --panel: #ffffff;
+  --muted: #64748b;
+  --text: #0f172a;
+  --accent: #16a34a;
   --accent-weak: #16a34a;
   --danger: #ef4444;
-  --border: #1f2937;
+  --border: #e2e8f0;
 }
 
 * { box-sizing: border-box; }
@@ -21,7 +21,7 @@ html, body {
   line-height: 1.5;
 }
 
-.container { margin: 0 auto; padding: 24px 16px 48px; }
+.container { margin: 0 auto; padding: 16px 12px 24px; }
 
 .page-header {
   margin-bottom: 16px;
@@ -42,24 +42,24 @@ html, body {
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 12px 16px;
-  margin: 12px 0 20px;
+  padding: 8px 12px;
+  margin: 8px 0 12px;
 }
 
 /* Buttons */
-.btn-group { display: flex; gap: 8px; }
+.btn-group { display: flex; gap: 6px; }
 .btn {
-  background: #0b1220;
+  background: #f8fafc;
   color: var(--text);
   border: 1px solid var(--border);
   border-radius: 8px;
-  padding: 8px 12px;
+  padding: 6px 10px;
   cursor: pointer;
 }
-.btn:hover { background: #0c1527; }
+.btn:hover { background: #eef2f7; }
 .is-active #btnActive, .is-passive #btnPassive {
-  background: var(--accent);
-  color: #052e16;
+  background: #dcfce7;
+  color: #065f46;
   border-color: #86efac;
 }
 
@@ -81,15 +81,15 @@ html, body {
   text-align: left;
   position: sticky;
   top: 0;
-  background: #0b1220;
+  background: #f8fafc;
   border-bottom: 1px solid var(--border);
-  padding: 10px 12px;
+  padding: 8px 10px;
   font-weight: 600;
   z-index: 2; /* keep header above sticky first column */
 }
 
 .tenses-table tbody td, .tenses-table thead th {
-  padding: 12px;
+  padding: 8px 10px;
   border-top: 1px solid var(--border);
   vertical-align: top;
   border-left: 1px solid var(--border);
@@ -103,15 +103,15 @@ html, body {
 .tenses-table tbody td:first-child {
   position: sticky;
   left: 0;
-  background: #0b1220; /* same as header background */
+  background: #f8fafc; /* same as header background */
   z-index: 1;
 }
 
 /* Keep hover consistent: don't change first column background on hover */
-.tenses-table tbody td:first-child:hover { background: #0b1220; }
+.tenses-table tbody td:first-child:hover { background: #f8fafc; }
 
 /* highlight only hovered cell */
-.tenses-table tbody td:hover { background: #0c1527; }
+.tenses-table tbody td:hover { background: #f1f5f9; }
 
 .time-name { text-align: center; font-weight: 600; }
 
@@ -122,33 +122,33 @@ html, body {
 .formula {
   white-space: pre-wrap;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  background: #0b1220;
+  background: #f8fafc;
   border: 1px solid var(--border);
   border-radius: 8px;
-  padding: 8px;
+  padding: 6px;
   font-size: 12px; /* smaller font for formulas */
 }
 
-.cell-content { display: grid; gap: 8px; }
-.cell-desc { color: var(--muted); font-size: 13px; }
-.cell-block { display: grid; gap: 6px; }
+.cell-content { display: grid; gap: 6px; }
+.cell-desc { color: var(--muted); font-size: 12px; }
+.cell-block { display: grid; gap: 4px; }
 .formula-label { display: none; }
 
 /* Color-code formula blocks by type */
-.formula--aff { border-color: #14532d; background: #062515; }
-.formula--neg { border-color: #4c1d1d; background: #200b0b; }
-.formula--q { border-color: #1e3a8a; background: #0b1530; }
+.formula--aff { border-color: #86efac; background: #ecfdf5; }
+.formula--neg { border-color: #fecaca; background: #fef2f2; }
+.formula--q { border-color: #bfdbfe; background: #eff6ff; }
 
 .markers {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 4px;
 }
 
 .marker-chip {
-  background: #0b2740;
-  border: 1px solid #113457;
-  color: #b3dcff;
+  background: #eaf4ff;
+  border: 1px solid #cfe3ff;
+  color: #1e3a8a;
   border-radius: 999px;
   padding: 2px 8px;
   font-size: 12px;
