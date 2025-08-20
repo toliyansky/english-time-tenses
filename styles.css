@@ -135,6 +135,7 @@ input:checked + .slider:before {
   border-bottom: 1px solid var(--border);
   padding: 10px 12px;
   font-weight: 600;
+  z-index: 2; /* keep header above sticky first column */
 }
 
 .tenses-table tbody td, .tenses-table thead th {
@@ -143,7 +144,21 @@ input:checked + .slider:before {
   vertical-align: top;
   border-left: 1px solid var(--border);
 }
-.tenses-table thead th:first-child, .tenses-table tbody td:first-child { border-left: none; }
+.tenses-table tbody td { background: var(--panel); }
+
+/* Make the first column behave like the header row (service column) */
+.tenses-table thead th:first-child {
+  left: 0;
+}
+.tenses-table tbody td:first-child {
+  position: sticky;
+  left: 0;
+  background: #0b1220; /* same as header background */
+  z-index: 1;
+}
+
+/* Keep hover consistent: don't change first column background on hover */
+.tenses-table tbody td:first-child:hover { background: #0b1220; }
 
 /* highlight only hovered cell */
 .tenses-table tbody td:hover { background: #0c1527; }

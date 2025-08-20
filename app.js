@@ -80,7 +80,7 @@
 
       // First column: Time
       const tdTime = document.createElement('td');
-      tdTime.innerHTML = '<div class="time-name">' + escapeHtml(tense.time) + '</div>';
+      tdTime.appendChild(renderTimeCell(tense.time));
       row.appendChild(tdTime);
 
       // Map aspects by name for quick access
@@ -157,6 +157,16 @@
     markersBlock.appendChild(renderMarkers(aspect.markers || []));
     wrapper.appendChild(markersBlock);
 
+    return wrapper;
+  }
+
+  function renderTimeCell(timeName) {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'cell-content';
+    const title = document.createElement('div');
+    title.className = 'time-name';
+    title.textContent = timeName;
+    wrapper.appendChild(title);
     return wrapper;
   }
 
