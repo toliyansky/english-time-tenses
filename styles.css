@@ -1,6 +1,6 @@
 /* Base layout */
 :root {
-  --bg: #f8fafc;
+  --bg: #ffffff;
   --panel: #ffffff;
   --muted: #64748b;
   --text: #0f172a;
@@ -21,7 +21,7 @@ html, body {
   line-height: 1.5;
 }
 
-.container { margin: 0 auto; padding: 16px 12px 24px; }
+.container { margin: 0 auto; padding: 12px 8px 16px; }
 
 .page-header {
   margin-bottom: 16px;
@@ -42,25 +42,24 @@ html, body {
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 8px 12px;
-  margin: 8px 0 12px;
+  padding: 6px 8px;
+  margin: 6px 0 10px;
 }
 
 /* Buttons */
-.btn-group { display: flex; gap: 6px; }
+.btn-group { display: flex; gap: 4px; }
 .btn {
   background: #f8fafc;
   color: var(--text);
-  border: 1px solid var(--border);
+  border: none;
   border-radius: 8px;
-  padding: 6px 10px;
+  padding: 4px 8px;
   cursor: pointer;
 }
 .btn:hover { background: #eef2f7; }
 .is-active #btnActive, .is-passive #btnPassive {
   background: #dcfce7;
   color: #065f46;
-  border-color: #86efac;
 }
 
 /* Table */
@@ -81,15 +80,15 @@ html, body {
   text-align: left;
   position: sticky;
   top: 0;
-  background: #f8fafc;
+  background: var(--panel);
   border-bottom: 1px solid var(--border);
-  padding: 8px 10px;
+  padding: 6px 8px;
   font-weight: 600;
   z-index: 2; /* keep header above sticky first column */
 }
 
 .tenses-table tbody td, .tenses-table thead th {
-  padding: 8px 10px;
+  padding: 6px 8px;
   border-top: 1px solid var(--border);
   vertical-align: top;
   border-left: 1px solid var(--border);
@@ -103,12 +102,12 @@ html, body {
 .tenses-table tbody td:first-child {
   position: sticky;
   left: 0;
-  background: #f8fafc; /* same as header background */
+  background: var(--panel); /* same as header background */
   z-index: 1;
 }
 
 /* Keep hover consistent: don't change first column background on hover */
-.tenses-table tbody td:first-child:hover { background: #f8fafc; }
+.tenses-table tbody td:first-child:hover { background: var(--panel); }
 
 /* highlight only hovered cell */
 .tenses-table tbody td:hover { background: #f1f5f9; }
@@ -125,13 +124,13 @@ html, body {
   background: #f8fafc;
   border: 1px solid var(--border);
   border-radius: 8px;
-  padding: 6px;
+  padding: 4px;
   font-size: 12px; /* smaller font for formulas */
 }
 
-.cell-content { display: grid; gap: 6px; }
+.cell-content { display: grid; gap: 4px; }
 .cell-desc { color: var(--muted); font-size: 12px; }
-.cell-block { display: grid; gap: 4px; }
+.cell-block { display: grid; gap: 3px; }
 .formula-label { display: none; }
 
 /* Color-code formula blocks by type */
@@ -142,7 +141,7 @@ html, body {
 .markers {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
+  gap: 3px;
 }
 
 .marker-chip {
@@ -150,7 +149,7 @@ html, body {
   border: 1px solid #cfe3ff;
   color: #1e3a8a;
   border-radius: 999px;
-  padding: 2px 8px;
+  padding: 1px 6px;
   font-size: 12px;
 }
 
