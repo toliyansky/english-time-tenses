@@ -36,11 +36,7 @@ html, body {
   font-size: 24px;
 }
 
-.page-header .subtitle {
-  margin: 0;
-  color: var(--muted);
-  font-size: 14px;
-}
+/* removed subtitle styles */
 
 /* Toggle */
 .controls {
@@ -149,9 +145,8 @@ input:checked + .slider:before {
 }
 .tenses-table thead th:first-child, .tenses-table tbody td:first-child { border-left: none; }
 
-.tenses-table tbody tr:hover td {
-  background: #0c1527;
-}
+/* highlight only hovered cell */
+.tenses-table tbody td:hover { background: #0c1527; }
 
 .time-name { text-align: center; font-weight: 600; }
 
